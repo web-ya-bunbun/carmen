@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+/*--------------------
+  module
+--------------------*/
+.header__nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
+  @include winSizeM {
+    width: 100%;
+    left: 0;
+    background: linear-gradient(0deg,rgba(52, 21, 6, 0) 0%, rgba(52, 21, 6, 0.6) 50%, rgba(52, 21, 6, 1) 100%);
+  }
+  @include winSizeS {
+    width: 50%;
+    height: 100%;
+    right: 0;
+    background: rgba($color: $black, $alpha: 0.9);
+    transform: translateX(100%);
+    transition: all 0.3s cubic-bezier(0.12, 0, 0.39, 0);
+  }
+}
+.gnav__list {
+  @include winSizeM {
+    display: flex;
+  }
+  @include winSizeS {
+    position: absolute;
+    place-self: center;
+    inset: 0;
+  }
+}
+.gnav__item {
+  padding: 10px;
+  font-family: $fontFamilyEn;
+  letter-spacing: $titleLetterSpacing;
+}
+.gnav__link {
+  display: block;
+  padding-left: 1em;
+  background-image: url(../img/icon_spade.png);
+  background-repeat: no-repeat;
+  background-size: 0.7em;
+  background-position: center left;
+  text-shadow: $textShadowS;
+  @include winSizeM {
+    font-size: 1.375em;
+    transition: all .3s;
+    &:hover {
+      filter: drop-shadow(4px 4px 8px rgba($color: $textColor, $alpha: 0.6));
+    }
+  }
+  @include winSizeS {
+    font-size: clamp(1em, 4vw, 2em);
+  }
+}
+.menuBtn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15vw;
+  aspect-ratio: 1 / 1;
+  transition: all 0.3s cubic-bezier(0.12, 0, 0.39, 0);
+  z-index: 3;
+  @include winSizeM {
+    display: none;
+  }
+}
+.menuBtn__item {
+  display: block;
+  width: 60%;
+  position: absolute;
+  place-self: center;
+  inset: 0;
+}
+.menuBtn__icon {
+  filter: drop-shadow(1px 1px 0 $black);
+}
+.menuLine {
+  fill: $textColor;
+}
+.menuBtn__func + .menuBtn .menuLine {
+  opacity: 1;
+  transition: all 0.3s cubic-bezier(0.12, 0, 0.39, 0);
+}
+.menuBtn__func:checked + .menuBtn {
+  .menuLine:first-child {
+    transform: translateX(-20%) rotate(-45deg);
+    transform-origin: right top;
+  }
+  .menuLine:last-child {
+    transform: translateX(-20%) rotate(45deg);
+    transform-origin: right bottom;
+  }
+  .menuLine:nth-child(2) {
+    opacity: 0;
+  }
+}
+.menuBtn__func:checked + .menuBtn + .header__nav {
+  @include winSizeS {
+    transform: translateX(0);
+  }
+}
+.pagetop {
+  position: fixed;
+  bottom: -10rem;
+  right: 1rem;
+  display: block;
+  width: 3rem;
+  aspect-ratio: 14 / 15;
+  background-image: url(../img/icon_spade.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.3s;
+  z-index: 1;
+  &:hover {
+    opacity: 0.6;
+  }
+  &.is-appear {
+    bottom: 1rem;
+  }
+}
+.pagetop__text {
+  position: absolute;
+  place-self: center;
+  inset: 0;
+  margin-top: 0.2em;
+  font-family: $fontFamilyEn;
+  font-size: 0.7rem;
+  color: $baseColor;
+}
+.section__title {
+  font-family: $fontFamilyEn;
+  font-weight: 300;
+  color: $textColor#000;
+  line-height: $titleLineHeight;
+  letter-spacing: $titleLetterSpacing;
+  text-shadow: $textShadowL;
+  @include winSizeM {
+    font-size: 4rem;
+  }
+  @include winSizeS {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+}

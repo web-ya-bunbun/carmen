@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/*--------------------
+  basic
+--------------------*/
+html {
+  font-size: $rootFontSize;
+  scroll-behavior: smooth;
+  @include winSizeS {
+    font-size: $rootFontSizeSP;
+  }
+}
+body {
+	background-color: $baseColor;
+  color: $basicFontColor;
+  font-family: $fontFamily;
+  font-size: $rootFontSize;
+  line-height: $lineHeight;
+  -webkit-text-size-adjust: none;
+  position: relative;
+}
+/* link */
+a {
+  color: $basicFontColor;
+  text-decoration: none;
+}

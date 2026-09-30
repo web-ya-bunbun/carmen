@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="誰もが知るオペラの名作「カルメン」がアニメで登場！2099.12.31 (Sat) 19:00〜 ネコネコTVにて無料ストリーミング配信 ">
+  <title>オペラアニメ「カルメン」</title>
+  <script type="module" src="js/module.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Noto+Serif+JP:wght@500&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <input type="checkbox" name="menuBtn" id="menuBtn" class="menuBtn__func" hidden>
+    <div class="menuBtn">
+      <label for="menuBtn" class="menuBtn__item">
+        <svg class="menuBtn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180">
+          <rect class="menuLine" x="0" y="0" width="240" height="15" rx="7.5" ry="7.5"/>
+          <rect class="menuLine" x="0" y="82.5" width="240" height="15" rx="7.5" ry="7.5"/>
+          <rect class="menuLine" x="0" y="165" width="240" height="15" rx="7.5" ry="7.5"/>
+        </svg>
+      </label>
+    </div>
+    <div class="header__nav">
+      <nav class="gnav">
+        <ul class="gnav__list">
+          <li class="gnav__item"><a href="#Story" class="gnav__link">Story</a></li>
+          <li class="gnav__item"><a href="#Character" class="gnav__link">Character</a></li>
+          <li class="gnav__item"><a href="#Trailer" class="gnav__link">Trailer</a></li>
+          <li class="gnav__item"><a href="#Gallery" class="gnav__link">Gallery</a></li>
+          <li class="gnav__item"><a href="#Others" class="gnav__link">Others</a></li>
+        </ul>
+      </nav>
+    </div>
+    <h1 class="title"><img src="img/logo.png" alt=""></h1>
+    <div class="description">
+      <p class="description__txt">あの名作オペラが<br>アニメになって登場</p>
+      <p class="description__info">2099.12.31 (Sat) 19:00〜<br>ネコネコTVにて無料ストリーミング配信 </p>
+    </div>
+    <div class="mv">
+      <picture>
+        <source media="(min-width: 901px)" srcset="img/mv_pc.png">
+        <img src="img/mv_sp.png" alt="">
+      </picture>
+    </div>
+  </header>
+  <main class="main">
+    <div id="Story" class="section sec-story">
+      <div class="sec-story__inner">
+        <h2 class="sec-story__title section__title">Story</h2>
+        <div class="sec-story__txt">
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div>
+    </div>
+    <section id="Character" class="section sec-character">
+      <h2 class="sec-character__title section__title">Character</h2>
+      <div id="character-list" class="character__list">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-no-swiping character__box character__box--carmen">
+            <!-- <span class="character__shadow character__shadow--carmen"><img src="img/char_shadow01.png" alt=""></span> -->
+            <div class="character__img character__img--carmen">
+              <picture>
+                <source media="(min-width: 901px)" srcset="img/char_carmen.png">
+                <img src="img/char_carmen_sp.png" alt="">
+              </picture>
+            </div>
+            <div class="character__name character__name--carmen"><img src="img/name_carmen.png" alt=""></div>
+            <div class="character__profile character__profile--carmen">
+              <h3 class="character__txtName">カルメン<span class="character__vo">（Vo：赤花ローザ）</span></h3>
+              <div class="character__text">
+                <p>本作のヒロイン。</p>
+                <p>タバコ工場で働く、自由を愛する美しいジプシーの女性。</p>
+                <p>強烈な魅力で男たちを魅了する。</p>
+              </div>
+              <button class="character__music">アリア：恋は野の鳥（ハバネラ）</button>
+              <audio src="voice/1.wav"></audio>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-no-swiping character__box character__box--jose">
+            <!-- <span class="character__shadow character__shadow--jose"><img src="img/char_shadow02.png" alt=""></span> -->
+            <div class="character__img character__img--jose">
+              <picture>
+                <source media="(min-width: 901px)" srcset="img/char_jose.png">
+                <img src="img/char_jose_sp.png" alt="">
+              </picture>
+            </div>
+            <div class="character__name character__name--jose"><img src="img/name_jose.png" alt=""></div>
+            <div class="character__profile character__profile--jose">
+              <h3 class="character__txtName">ドン・ホセ<span class="character__vo">（Vo：山田太郎）</span></h3>
+              <div class="character__text">
+                <p>まじめな衛兵の伍長。</p>
+                <p>カルメンに深く恋い焦がれたことで、人生が破滅へと向かっていく。</p>
+              </div>
+              <button class="character__music">おまえの投げたこの花を（花の歌）</button>
+              <audio src="voice/2.wav"></audio>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-no-swiping character__box character__box--micaela">
+            <!-- <span class="character__shadow character__shadow--micaela"><img src="img/char_shadow03.png" alt=""></span> -->
+            <div class="character__img character__img--micaela">
+              <picture>
+                <source media="(min-width: 901px)" srcset="img/char_micaela.png">
+                <img src="img/char_micaela_sp.png" alt="">
+              </picture>
+            </div>
+            <div class="character__name character__name--micaela"><img src="img/name_michaela.png" alt=""></div>
+            <div class="character__profile character__profile--micaela">
+              <h3 class="character__txtName">ミカエラ<span class="character__vo">（Vo：清野美子）</span></h3>
+              <div class="character__text">
+                <p>ドン・ホセの許嫁（幼なじみ）。</p>
+                <p>純粋で優しい心の村娘。</p>
+              </div>
+              <button class="character__music">何を恐れることがありましょう</button>
+              <audio src="voice/3.wav"></audio>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-no-swiping character__box character__box--escamillo">
+            <!-- <span class="character__shadow character__shadow--escamillo"><img src="img/char_shadow04.png" alt=""></span> -->
+            <div class="character__img character__img--escamillo">
+              <picture>
+                <source media="(min-width: 901px)" srcset="img/char_escamillo.png">
+                <img src="img/char_escamillo_sp.png" alt="">
+              </picture>
+            </div>
+            <div class="character__name character__name--escamillo"><img src="img/name_escamillo.png" alt=""></div>
+            <div class="character__profile character__profile--escamillo">
+              <h3 class="character__txtName">エスカミーリョ<span class="character__vo">（Vo：牛山武雄）</span></h3>
+              <div class="character__text">
+                <p>華やかで人気のある闘牛士。</p>
+                <p>「闘牛士の歌」を歌い、カルメンの新たな恋人となる。</p>
+              </div>
+              <button class="character__music">諸君の乾杯を喜んで受けよう（闘牛士の歌）</button>
+              <audio src="voice/4.wav"></audio>
+            </div>
+          </div>
+        </div>
+        <div class="character__thumbs swiper-pagination anime-hide02"></div>
+      </div>
+    </section>
+  </main>
+  <a href="#" class="pagetop">
+    <span class="pagetop__text">TOP</span>
+	</a>
+  <footer class="footer">footer</footer>
+</body>
+</html>

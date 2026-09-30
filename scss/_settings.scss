@@ -1,0 +1,150 @@
+@charset 'utf-8';
+
+// ------------------------------
+//	settings
+// ------------------------------
+
+//color
+$black: #1E1E1E;
+$white: #fff;
+$baseColor: #341506;
+$textColor: #FFF8E5;
+$accentColor1: rgba(200, 173, 173, 0.8);
+$accentColor2: #AF152C;
+
+//fonts
+$fontFamily: 'Noto Sans JP', sans-serif;
+$fontFamilySerif: 'Noto Serif JP', serif;
+$fontFamilyEn: 'Roboto Mono', monospace;
+$basicFontColor: $textColor;
+$rootFontSize: 100%;
+$rootFontSizeSP: clamp(80%, 4vw, 100%);
+$fontSize: 1rem;
+$lineHeight: 1.8;
+$titleLineHeight: 1.2;
+$titleLetterSpacing: 0.1em;
+$textShadowL: 5px 3px 0 $black;
+$textShadowS: 2px 1px 0 $black;
+
+//responsive
+$breakPointL: 1200px;
+$breakPointM: 900px;
+$breakPointS: 480px;
+$pcMaxWidth: 1440px;
+$pcPadding: 30px;
+$pcPaddingL: 60px;
+$spPadding: 5vw;
+
+@mixin winSizeL {
+  @media screen and (min-width:($breakPointL+1)){
+    @content;
+  }
+}
+@mixin winSizeM {
+  @media screen and (min-width:($breakPointM+1)){
+    @content;
+  }
+}
+@mixin winSizeS {
+  @media screen and (max-width:($breakPointM)){
+    @content;
+  }
+}
+@mixin winSizeSS {
+  @media screen and (max-width:($breakPointS)){
+    @content;
+  }
+}
+@mixin winLandscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin winPortrait {
+  @media screen and (orientation: portrait) {
+    @content;
+  }
+}
+
+//clearfix
+@mixin clearfix() {
+  &::after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}
+
+//inner
+@mixin inner {
+  margin-inline: auto;
+  padding-left: $spPadding;
+  padding-right: $spPadding;
+  @include winSizeM {
+    max-width: $pcMaxWidth;
+    padding-left: $pcPadding;
+    padding-right: $pcPadding; 
+  }
+}
+
+//arrow
+@mixin arrowBase($top:50%,$size:.8rem) {
+  content: '';
+  position: absolute;
+  top: $top;
+  display: block;
+  width: $size;
+  height: $size;
+  margin-top: -$size/2;
+}
+@mixin arrowR($right:0,$bdc:$white) {
+  right: $right;
+  border-top: 1px solid $bdc;
+  border-right: 1px solid $bdc;
+  transform: rotate(45deg);
+}
+@mixin arrowL($top:50%,$left:0,$bdc:$white) {
+  left: $left;
+  border-bottom: 1px solid $bdc;
+  border-left: 1px solid $bdc;
+  transform: rotate(45deg);
+}
+
+//table responsive
+@mixin tableBlock() {
+  > thead,
+  > tbody,
+  > tfoot,
+  > thead > tr,
+  > tbody > tr,
+  > tfoot > tr,
+  > thead > tr > th,
+  > thead > tr > td,
+  > tbody > tr > th,
+  > tbody > tr > td,
+  > tfoot > tr > th,
+  > tfoot > tr > td {
+    display: block;
+  }
+}
+
+//object-fit
+@mixin objectFit($w:100%,$h:100%,$of:cover) {
+  width: $w;
+  height: $h;
+  object-fit: $of;
+}
+
+//placeholder
+@mixin placeholder($color:$midGray) {
+  &::placeholder {
+    color: $color;
+  }
+}
+
+//parts margin
+@mixin partsMargin($margin:1.5rem) {
+  &:not(:first-child) {
+    margin-top: $margin;
+  }
+}
