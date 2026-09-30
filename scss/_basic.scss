@@ -18,6 +18,7 @@ body {
   line-height: $lineHeight;
   -webkit-text-size-adjust: none;
   position: relative;
+  overflow-x: clip;
 }
 /* link */
 a {

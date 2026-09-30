@@ -243,26 +243,26 @@
 		visibility: visible;
 	}
 }
-.character__shadow {
-  position: absolute;
-  top: -2.8%;
-  left: 0;
-  display: inline-block;
-  opacity: 0;
-  .swiper-slide-active & {
-    animation: fadeIn 1s ease-out 1s 1 normal forwards;
-  }
-  img {
-    transition: transform .3s ease-out;
-    @include winPortrait {
-      @include objectFit($w: 100vh, $h: 165.5vw, $of: cover);
-      object-position: 43% 0;
-    }
-    @include winLandscape {
-      width: 100%;
-    }
-  }
-}
+// .character__shadow {
+//   position: absolute;
+//   top: -2.8%;
+//   left: 0;
+//   display: inline-block;
+//   opacity: 0;
+//   .swiper-slide-active & {
+//     animation: fadeIn 1s ease-out 1s 1 normal forwards;
+//   }
+//   img {
+//     transition: transform .3s ease-out;
+//     @include winPortrait {
+//       @include objectFit($w: 100vh, $h: 165.5vw, $of: cover);
+//       object-position: 43% 0;
+//     }
+//     @include winLandscape {
+//       width: 100%;
+//     }
+//   }
+// }
 .character__img {
   position: relative;
   left: -5%;
@@ -395,6 +395,45 @@
   line-height: 1.5;
   white-space: nowrap;
 }
+
+/* Trailer */
+.sec-trailer {
+  position: relative;
+  background-image: url(../img/bg_trailer.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sec-trailer__title {
+  position: absolute;
+  place-self: center;
+  inset: 0;
+  @include winSizeM {
+    transform: translateY(-20vw);
+  }
+  @include winSizeS {
+    transform: translateY(-35vw);
+  }
+}
+.movie {
+	position: absolute;
+  place-self: center;
+  inset: 0;
+  aspect-ratio: 16 / 9;
+  border: 1px solid $textColor;
+  padding: 2px;
+	@include winSizeS {
+		width: 80vw;
+	}
+	@include winSizeM {
+		width:50vw;
+	}
+}
+.movie__item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 // .scroll {
 // 	position: absolute;
 // 	left: 50%;
