@@ -59,7 +59,7 @@ textarea:not([rows]) {
   min-height: 10em;
 }
 :target {
-  scroll-margin-block: 5ex;
+  scroll-margin-block: 0;
 }
 address {
   font-style: inherit;

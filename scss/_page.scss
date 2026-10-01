@@ -20,26 +20,30 @@
   }
 }
 @keyframes parallax-move {
-  from { transform: translateY(0); }
-  to   { transform: translateY(50%); } /* 前景より遅く動かして視差を作る */
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50%);
+  } /* 前景より遅く動かして視差を作る */
 }
 .title {
-	position: absolute;
-	z-index: 1;
-	@include winSizeS {
-		left: 50%;
-		bottom: 5vh;
-		width: 90vw;
+  position: absolute;
+  z-index: 1;
+  @include winSizeS {
+    left: 50%;
+    bottom: 5vh;
+    width: 90vw;
     transform: translateX(-50%);
-	}
-	@include winSizeM {
-		right: 3%;
-		bottom: 3%;
-		width: 57%;
-	}
-	img {
-		width: 100%;
-	}
+  }
+  @include winSizeM {
+    right: 3%;
+    bottom: 3%;
+    width: 57%;
+  }
+  img {
+    width: 100%;
+  }
 }
 .description {
   position: absolute;
@@ -49,22 +53,22 @@
   line-height: $titleLineHeight;
   @include winSizeS {
     width: 90vw;
-		left: 50%;
-		top: 7vh;
+    left: 50%;
+    top: 7vh;
     transform: translateX(-50%);
-	}
-	@include winSizeM {
-		left: 50%;
-		top: 20%;
-	}
+  }
+  @include winSizeM {
+    left: 50%;
+    top: 20%;
+  }
 }
 .description__txt {
   @include winSizeS {
     font-size: clamp(1.5rem, 10vw, 3.5rem);
-	}
-	@include winSizeM {
-		font-size: clamp(2rem, 5vw, 5rem);
-	}
+  }
+  @include winSizeM {
+    font-size: clamp(2rem, 5vw, 5rem);
+  }
 }
 .description__info {
   margin-top: 1em;
@@ -72,10 +76,10 @@
   letter-spacing: 0.05em;
   @include winSizeS {
     font-size: clamp(0.6rem, 10vw, 1.5rem);
-	}
-	@include winSizeM {
-		font-size: clamp(1rem, 2vw, 2rem);
-	}
+  }
+  @include winSizeM {
+    font-size: clamp(1rem, 2vw, 2rem);
+  }
 }
 
 /* story */
@@ -113,7 +117,7 @@
   }
 }
 .sec-story__txt {
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   line-height: $lineHeight;
   @include winSizeM {
     flex: 1;
@@ -126,40 +130,40 @@
 
 /* Character */
 @keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes slideInName {
-	0% {
-		transform: translateX(-50%);
-		opacity: 0;
-	}
-	80% {
-		transform: translateX(0);
-		opacity: 0.5;
-	}
-	100% {
-		transform: translateX(0);
-		opacity: 1;
-	}
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 @keyframes slideInChar {
-	0% {
-		left: -5%;
-		opacity: 0;
-	}
-	80% {
-		opacity: .5;
-		left: 0;
-	}
-	100% {
-		left: 0;
-		opacity: 1;
-	}
+  0% {
+    left: -5%;
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.5;
+    left: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
 }
 .sec-character {
   position: relative;
@@ -240,8 +244,8 @@
   overflow: hidden;
   visibility: hidden;
   &.swiper-slide-active {
-		visibility: visible;
-	}
+    visibility: visible;
+  }
 }
 // .character__shadow {
 //   position: absolute;
@@ -301,7 +305,11 @@
     width: 100%;
     height: 100%;
     background: #341506;
-    background: linear-gradient(0deg,rgba(52, 21, 6, 1) 0,rgba(52, 21, 6, 0) 70%);
+    background: linear-gradient(
+      0deg,
+      rgba(52, 21, 6, 1) 0,
+      rgba(52, 21, 6, 0) 70%
+    );
   }
 }
 .character__name {
@@ -320,14 +328,14 @@
     text-align: center;
   }
   .swiper-slide-active & {
-    animation: slideInName .5s ease-out .3s 1 normal forwards;
+    animation: slideInName 0.5s ease-out 0.3s 1 normal forwards;
   }
   img {
     position: relative;
     display: inline-block;
     height: 100%;
     object-fit: contain;
-    transition: transform .3s ease-out;
+    transition: transform 0.3s ease-out;
     @include winSizeS {
       top: -15vw;
     }
@@ -335,7 +343,7 @@
 }
 .character__profile {
   opacity: 0;
-  transition: transform .3s ease-out;
+  transition: transform 0.3s ease-out;
   @include winSizeM {
     position: absolute;
     left: 50%;
@@ -345,10 +353,9 @@
   @include winSizeS {
     margin-top: -10vw;
     padding: 0 10vw 4vw;
-
   }
   .swiper-slide-active & {
-    animation: fadeIn .5s ease-in .8s 1 normal forwards;
+    animation: fadeIn 0.5s ease-in 0.8s 1 normal forwards;
   }
 }
 .character__txtName {
@@ -380,7 +387,7 @@
   position: relative;
   margin-bottom: 1rem;
   > p {
-    letter-spacing: .05em;
+    letter-spacing: 0.05em;
     line-height: $lineHeight;
     &:not(:last-child) {
       margin-bottom: 0.8em;
@@ -415,23 +422,164 @@
   }
 }
 .movie {
-	position: absolute;
+  position: absolute;
   place-self: center;
   inset: 0;
   aspect-ratio: 16 / 9;
-  border: 1px solid $textColor;
+  border: 1px solid $accentColor1;
   padding: 2px;
-	@include winSizeS {
-		width: 80vw;
-	}
-	@include winSizeM {
-		width:50vw;
-	}
+  @include winSizeS {
+    width: 80vw;
+  }
+  @include winSizeM {
+    width: 50vw;
+  }
 }
 .movie__item {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+/* Gallery */
+.sec-gallery {
+  position: relative;
+}
+.gallery__bg01 {
+  position: absolute;
+  top: 2%;
+  left: 0;
+  background-image: url(../img/bg_gallery_01.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% auto;
+  @include winPortrait {
+    width: 70vw;
+    height: 50vw;
+  }
+  @include winLandscape {
+    width: 36.82%;
+    height: 50%;
+  }
+}
+.gallery__bg02 {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  background-image: url(../img/bg_gallery_02.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% auto;
+  @include winPortrait {
+    width: 68vw;
+    height: 50vw;
+  }
+  @include winLandscape {
+    width: 36.05%;
+    height: 50%;
+  }
+}
+.sec-gallery__title {
+  position: absolute;
+  place-self: center;
+  inset: 0;
+  @include winSizeM {
+    transform: translateY(-23vw);
+  }
+  @include winSizeS {
+    transform: translateY(-30vw);
+  }
+}
+#gallery-main {
+  --swiper-navigation-sides-offset: -50px;
+  .swiper-navigation-icon {
+    display: none;
+  }
+}
+.gallery {
+  position: absolute;
+  place-self: center;
+  inset: 0;
+  border: 1px solid $accentColor1;
+  padding: 2px;
+  @include winSizeM {
+    width: 62.5%;
+  }
+  @include winSizeS {
+    width: 80%;
+  }
+}
+.gallery__item {
+  position: relative;
+}
+.gallery__img {
+  @include objectFit;
+}
+.gallery__button {
+  background-size: 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  z-index: 1;
+  @include winPortrait {
+    width: 5.2vw;
+    height: 7.8667vw;
+  }
+  @include winLandscape {
+    width: 24px;
+    height: 36px;
+  }
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+.gallery__button--next,
+.gallery__button--prev {
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 1;
+  }
+}
+.gallery__button--next {
+  background-image: url(../img/arw_next.svg);
+}
+.gallery__button--prev {
+  background-image: url(../img/arw_prev.svg);
+}
+
+.galleryThumbsWrapper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.galleryThumbs__item {
+  position: relative;
+  cursor: pointer;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $accentColor1;
+    mix-blend-mode: color;
+    z-index: 1;
+    transition: all 0.3s;
+  }
+  &.swiper-slide-thumb-active {
+    &::after {
+      opacity: 0;
+    }
+  }
+}
+.galleryThumbs__img {
+  @include objectFit;
 }
 
 // .scroll {
