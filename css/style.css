@@ -893,19 +893,19 @@ a {
 /* Gallery */
 .sec-gallery {
   position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .gallery__bg {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100% auto;
   animation: parallax-move2 linear both;
-  animation-timeline: view();
+  animation-timeline: scroll(root block);
 }
 @media screen and (orientation: landscape) {
   .gallery__bg {
@@ -918,14 +918,12 @@ a {
   }
 }
 
-@keyframes parallax-move {
-  /* 画面の下から入ってきたとき */
+@keyframes parallax-move2 {
   from {
-    transform: translateY(-20%);
+    transform: translateY(-100%);
   }
-  /* 画面の上へ消えていくとき */
   to {
-    transform: translateY(20%);
+    transform: translateY(30%);
   }
 }
 .sec-gallery__title {
