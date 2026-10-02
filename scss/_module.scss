@@ -146,3 +146,9 @@
     font-size: clamp(2rem, 10vw, 3rem);
   }
 }
+.copyright {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: $titleLetterSpacing;
+}

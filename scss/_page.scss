@@ -24,8 +24,8 @@
     transform: translateY(0);
   }
   to {
-    transform: translateY(50%);
-  } /* 前景より遅く動かして視差を作る */
+    transform: translateY(300%);
+  }
 }
 .title {
   position: absolute;
@@ -445,39 +445,30 @@
 .sec-gallery {
   position: relative;
 }
-.gallery__bg01 {
+.gallery__bg {
   position: absolute;
-  top: 2%;
+  top: 0;
   left: 0;
-  background-image: url(../img/bg_gallery_01.png);
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100% auto;
-  @include winPortrait {
-    width: 70vw;
-    height: 50vw;
-  }
+  animation: parallax-move2 linear both;
+  animation-timeline: view();
+
   @include winLandscape {
-    width: 36.82%;
-    height: 50%;
+    background-image: url(../img/bg_gallery.png);
+  }
+  @include winPortrait {
+    background-image: url(../img/bg_gallery_sp.png);
   }
 }
-.gallery__bg02 {
-  position: absolute;
-  top: 20%;
-  right: 0;
-  background-image: url(../img/bg_gallery_02.png);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 100% auto;
-  @include winPortrait {
-    width: 68vw;
-    height: 50vw;
-  }
-  @include winLandscape {
-    width: 36.05%;
-    height: 50%;
-  }
+@keyframes parallax-move {
+  /* 画面の下から入ってきたとき */
+  from { transform: translateY(-20%); } 
+  /* 画面の上へ消えていくとき */
+  to { transform: translateY(20%); }   
 }
 .sec-gallery__title {
   position: absolute;
@@ -580,6 +571,69 @@
 }
 .galleryThumbs__img {
   @include objectFit;
+}
+/* credits */
+.sec-credits {
+  position: relative;
+  background-image: url(../img/bg_others.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sec-credits__inner {
+  place-self: center;
+  @include winSizeM {
+    position: absolute;
+    inset: 0;
+  }
+  @include winSizeS {
+    padding: 10vw 4vw;
+  }
+}
+.sec-credits__title {
+  margin-bottom: 1em;
+  text-align: center;
+}
+.credits {
+  @include winSizeM {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.credits__box {
+  margin-bottom: 3em;
+  &:last-child {
+    @include winSizeM {
+      grid-column: span 2;
+      text-align: center;
+    }
+  }
+}
+.credits__titleS {
+  margin-bottom: 0.3em;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: $titleLineHeight;
+  letter-spacing: $titleLetterSpacing;
+}
+.credits__items,.credits__items {
+  letter-spacing: $titleLetterSpacing;
+}
+.credits__row {
+  display: flex;
+}
+.credits__position {
+  position: relative;
+  width: 7em;
+  &::after {
+    content: '：';
+    position: absolute;
+    top: auto;
+    right: 0;
+  }
+}
+.credits__name {
+  padding-left: 0.5em;
 }
 
 // .scroll {
