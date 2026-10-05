@@ -7,13 +7,8 @@ const characterSlide = new Swiper('#character-list', {
     el: '.swiper-pagination',
     clickable: true,
     renderBullet: function (index, className) {
-      return (
-        '<div class="character__thumb ' +
-        className +
-        '"><img class="character__thumb-img" src="img/char_thumb0' +
-        (index + 1) +
-        '.png" alt=""></div>'
-      );
+      const imgUrl = `${import.meta.env.BASE_URL}img/char_thumb0${index + 1}.png`;
+      return `<div class="character__thumb ${className}"><img class="character__thumb-img" src="${imgUrl}" alt=""></div>`;
     },
   },
 });
