@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="誰もが知るオペラの名作「カルメン」がアニメで登場！2099.12.31 (Sat) 19:00〜 ネコネコTVにて無料ストリーミング配信 ">
   <title>オペラアニメ「カルメン」</title>
+  <script src="js/js-check.js"></script>
   <script type="module" src="js/module.js" defer></script>
   <script src="js/script.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,110 +51,144 @@
   <main class="main">
     <div id="Story" class="section sec-story">
       <div class="sec-story__inner">
-        <h2 class="sec-story__title section__title">Story</h2>
-        <div class="sec-story__txt">
-          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <h2 class="sec-story__title section__title js-fadeInUp">Story</h2>
+        <div class="sec-story__txt js-fadeInUp">
+          <p>19世紀、情熱の国スペインのセビージャ。自由を何よりも愛する妖艶なジプシーの女カルメンは、自分に興味を示さない生真面目な兵士ドン・ホセを誘惑する。</p>
+          <p>彼女の危険な魅力に溺れたホセは、職も名誉も、故郷の婚約者さえも捨てて密輸団へと身を落としていく。</p>
+          <p>しかし、束縛を嫌うカルメンの心は、やがて華やかなスター闘牛士エスカミーリョへと移ろってしまう。</p>
+          <p>愛を失い、激しい嫉妬と絶望に狂うホセ。闘牛場の熱気の中で再び対峙する二人を待ち受けるのは、狂気か、それとも破滅か。</p>
+          <p>愛と執着が火花を散らす、情熱の劇的物語。</p>
         </div>
       </div>
     </div>
     <section id="Character" class="section sec-character">
-      <h2 class="sec-character__title section__title">Character</h2>
-      <div id="character-list" class="character__list">
+      <h2 class="sec-character__title section__title js-fadeIn">Character</h2>
+      <div id="character-list" class="character__list js-fadeIn">
         <div class="swiper-wrapper">
           <div class="swiper-slide swiper-no-swiping character__box character__box--carmen">
-            <!-- <span class="character__shadow character__shadow--carmen"><img src="img/char_shadow01.png" alt=""></span> -->
-            <div class="character__img character__img--carmen">
-              <picture>
-                <source media="(min-width: 901px)" srcset="img/char_carmen.png">
-                <img src="img/char_carmen_sp.png" alt="">
-              </picture>
+            <div class="character__img">
+              <div class="character__shadow character__shadow--carmen">
+                <picture>
+                  <source media="(min-width: 901px)" srcset="img/char_carmen_shadow.png">
+                  <img src="img/char_carmen_shadow_sp.png" alt="">
+                </picture>
+              </div>
+              <div class="character__pic character__pic--carmen">
+                <picture>
+                  <source media="(min-width: 901px)" srcset="img/char_carmen.png">
+                  <img src="img/char_carmen_sp.png" alt="">
+                </picture>
+              </div>
             </div>
             <div class="character__name character__name--carmen"><img src="img/name_carmen.png" alt=""></div>
             <div class="character__profile character__profile--carmen">
               <h3 class="character__txtName">カルメン<span class="character__vo">（Vo：赤花ローザ）</span></h3>
               <div class="character__text">
-                <p>本作のヒロイン。</p>
-                <p>タバコ工場で働く、自由を愛する美しいジプシーの女性。</p>
-                <p>強烈な魅力で男たちを魅了する。</p>
+                <p>自由と情熱を何よりも愛する妖艶なジプシーの女。</p>
+                <p>男たちを翻弄する魔性の魅力を持つ。</p>
+                <p>誰からの束縛も拒み、己の信じる愛と気高い生き方をどこまでも貫き通す。</p>
               </div>
               <button class="character__music">アリア：恋は野の鳥（ハバネラ）</button>
               <audio src="voice/1.wav"></audio>
             </div>
           </div>
           <div class="swiper-slide swiper-no-swiping character__box character__box--jose">
-            <!-- <span class="character__shadow character__shadow--jose"><img src="img/char_shadow02.png" alt=""></span> -->
-            <div class="character__img character__img--jose">
-              <picture>
-                <source media="(min-width: 901px)" srcset="img/char_jose.png">
-                <img src="img/char_jose_sp.png" alt="">
-              </picture>
+            <div class="character__img">
+              <div class="character__shadow character__shadow--jose">
+                  <picture>
+                    <source media="(min-width: 901px)" srcset="img/char_jose_shadow.png">
+                    <img src="img/char_jose_shadow_sp.png" alt="">
+                  </picture>
+              </div>
+              <div class="character__pic character__pic--jose">
+                <picture>
+                  <source media="(min-width: 901px)" srcset="img/char_jose.png">
+                  <img src="img/char_jose_sp.png" alt="">
+                </picture>
+              </div>
             </div>
             <div class="character__name character__name--jose"><img src="img/name_jose.png" alt=""></div>
             <div class="character__profile character__profile--jose">
               <h3 class="character__txtName">ドン・ホセ<span class="character__vo">（Vo：山田太郎）</span></h3>
               <div class="character__text">
-                <p>まじめな衛兵の伍長。</p>
-                <p>カルメンに深く恋い焦がれたことで、人生が破滅へと向かっていく。</p>
+                <p>生真面目な衛兵の伍長。故郷に母親と婚約者を残している。</p>
+                <p>カルメンの誘惑に溺れ、職も名誉も捨てて転落していく。</p>
+                <p>彼女への歪んだ愛は執着へと変わり、激しい嫉妬と絶望の果てに狂気へと駆り立てられていく。</p>
               </div>
               <button class="character__music">アリア：おまえの投げたこの花を（花の歌）</button>
               <audio src="voice/2.wav"></audio>
             </div>
           </div>
           <div class="swiper-slide swiper-no-swiping character__box character__box--micaela">
-            <!-- <span class="character__shadow character__shadow--micaela"><img src="img/char_shadow03.png" alt=""></span> -->
-            <div class="character__img character__img--micaela">
-              <picture>
-                <source media="(min-width: 901px)" srcset="img/char_micaela.png">
-                <img src="img/char_micaela_sp.png" alt="">
-              </picture>
+            <div class="character__img">
+              <div class="character__shadow character__shadow--micaela">
+                  <picture>
+                    <source media="(min-width: 901px)" srcset="img/char_micaela_shadow.png">
+                    <img src="img/char_micaela_shadow_sp.png" alt="">
+                  </picture>
+              </div>
+              <div class="character__pic character__pic--micaela">
+                <picture>
+                  <source media="(min-width: 901px)" srcset="img/char_micaela.png">
+                  <img src="img/char_micaela_sp.png" alt="">
+                </picture>
+              </div>
             </div>
             <div class="character__name character__name--micaela"><img src="img/name_michaela.png" alt=""></div>
             <div class="character__profile character__profile--micaela">
               <h3 class="character__txtName">ミカエラ<span class="character__vo">（Vo：清野美子）</span></h3>
               <div class="character__text">
-                <p>ドン・ホセの許嫁（幼なじみ）。</p>
-                <p>純粋で優しい心の村娘。</p>
+                <p>ホセの故郷の幼なじみであり、純粋で心優しい婚約者。</p>
+                <p>病床の母親の言葉を伝えるため、危険を顧みず山中の密輸団のアジトへ単身ホセを探しにいく。</p>
+                <p>カルメンとは対照的な、清純さと強い芯を持つ女性。</p>
               </div>
               <button class="character__music">アリア：何を恐れることがありましょう</button>
               <audio src="voice/3.wav"></audio>
             </div>
           </div>
           <div class="swiper-slide swiper-no-swiping character__box character__box--escamillo">
-            <!-- <span class="character__shadow character__shadow--escamillo"><img src="img/char_shadow04.png" alt=""></span> -->
-            <div class="character__img character__img--escamillo">
-              <picture>
-                <source media="(min-width: 901px)" srcset="img/char_escamillo.png">
-                <img src="img/char_escamillo_sp.png" alt="">
-              </picture>
+            <div class="character__img">
+              <div class="character__shadow character__shadow--escamillo">
+                <picture>
+                  <source media="(min-width: 901px)" srcset="img/char_escamillo_shadow.png">
+                  <img src="img/char_escamillo_shadow_sp.png" alt="">
+                </picture>
+              </div>
+              <div class="character__pic character__pic--escamillo">
+                <picture>
+                  <source media="(min-width: 901px)" srcset="img/char_escamillo.png">
+                  <img src="img/char_escamillo_sp.png" alt="">
+                </picture>
+              </div>
             </div>
             <div class="character__name character__name--escamillo"><img src="img/name_escamillo.png" alt=""></div>
             <div class="character__profile character__profile--escamillo">
               <h3 class="character__txtName">エスカミーリョ<span class="character__vo">（Vo：牛山武雄）</span></h3>
               <div class="character__text">
-                <p>華やかで人気のある闘牛士。</p>
-                <p>「闘牛士の歌」を歌い、カルメンの新たな恋人となる。</p>
+                <p>セビージャで絶大な人気を誇る、華やかで自信に満ちあふれたスター闘牛士。</p>
+                <p>命がけで雄牛と戦う雄々しい姿でカルメンの心を奪う。</p>
+                <p>ホセの激しい嫉妬を買いながらも、堂々と彼女への愛を貫く男。</p>
               </div>
               <button class="character__music">アリア：諸君の乾杯を喜んで受けよう（闘牛士の歌）</button>
               <audio src="voice/4.wav"></audio>
             </div>
           </div>
         </div>
-        <div class="character__thumbs swiper-pagination anime-hide02"></div>
+        <div class="character__thumbs swiper-pagination js-fadeIn"></div>
       </div>
     </section>
     <section id="Trailer" class="section sec-trailer">
-      <h2 class="sec-trailer__title section__title">Trailer</h2>
+      <h2 class="sec-trailer__title section__title js-fadeInUp">Trailer</h2>
       <div class="sec-trailer__wrapper">
-        <div class="movie">
+        <div class="movie js-fadeInUp">
           <img class="movie__item" src="img/youtube.png" alt="">
         </div>
       </div>
     </section>
     <section id="Gallery" class="section sec-gallery">
-      <div class="gallery__bg js-parallax01"></div>
-      <h2 class="section__title sec-gallery__title anime-hide01">Gallery</h2>
-      <div class="gallery anime-hide02">
+      <div class="gallery__bg"></div>
+      <h2 class="section__title sec-gallery__title js-fadeInUp">Gallery</h2>
+      <div class="gallery anime-hide02 js-fadeInUp">
         <div id="gallery-main" class="gallery__main">
           <div class="swiper-wrapper">
             <div class="swiper-slide gallery__item"><img class="gallery__img"
@@ -176,7 +211,7 @@
         </div>
       </div>
       <div class="galleryThumbsWrapper">
-        <div id="gallery-thumbs" class="galleryThumbs anime-hide02">
+        <div id="gallery-thumbs" class="galleryThumbs js-fadeInUp">
           <div class="swiper-wrapper">
             <div class="swiper-slide galleryThumbs__item"><img class="galleryThumbs__img"
                 src="img/gallery_01.png" alt=""></div>
@@ -198,9 +233,9 @@
     </section>
     <section id="Credits" class="section sec-credits">
       <div class="sec-credits__inner">
-        <h2 class="sec-credits__title section__title">Credits</h2>
+        <h2 class="sec-credits__title section__title js-fadeInUp">Credits</h2>
         <div class="credits">
-          <div class="credits__box">
+          <div class="credits__box js-fadeInUp">
             <h3 class="credits__titleS">Music</h3>
             <dl class="credits__items">
               <div class="credits__row">
@@ -221,7 +256,7 @@
               </div>
             </dl>
           </div>
-          <div class="credits__box">
+          <div class="credits__box js-fadeInUp">
             <h3 class="credits__titleS">Casts</h3>
             <dl class="credits__items">
               <div class="credits__row">
@@ -243,7 +278,7 @@
             </dl>
             <p class="credits__item">鈴木大 (Bas) / 森ひろし (Bar) /<br>北すみれ (Sop) / 佐藤由紀 (Mez) </p>
           </div>
-          <div class="credits__box">
+          <div class="credits__box js-fadeInUp">
             <h3 class="credits__titleS">Produced By</h3>
             <p class="credits__item">ネコネコプロダクション　オペラアニメ製作委員会</p>
           </div>
@@ -254,6 +289,6 @@
   <a href="#" class="pagetop">
     <span class="pagetop__text">TOP</span>
 	</a>
-  <footer class="footer"><p class="copyright">&copy;nekoneko production &amp; web-ya-bunbun</p></footer>
+  <footer class="footer"><p class="copyright">&copy;web-ya-bunbun（※このサイトはフィクションです）</p></footer>
 </body>
 </html>

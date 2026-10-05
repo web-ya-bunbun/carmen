@@ -128,13 +128,20 @@
   }
 }
 
-/* Character */
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes fadeIn2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.2;
   }
 }
 @keyframes slideInName {
@@ -167,6 +174,9 @@
 }
 .sec-character {
   position: relative;
+  @include winSizeS {
+    padding-bottom: 25vw;
+  }
 }
 .sec-character__title {
   @include winSizeM {
@@ -191,7 +201,8 @@
   @include winSizeS {
     --swiper-pagination-bullet-width: 20vw;
     --swiper-pagination-bullet-height: 20vw;
-    --swiper-pagination-bottom: 0;
+    --swiper-pagination-top: auto;
+    --swiper-pagination-bottom: 4vw;
   }
   .character__thumbs {
     width: auto;
@@ -201,7 +212,10 @@
       left: 50%;
     }
     @include winSizeS {
-      position: relative;
+      position: absolute;
+      left: 50%;
+      width: 100%;
+      transform: translateX(-50%);
     }
   }
   .character__thumb {
@@ -247,37 +261,16 @@
     visibility: visible;
   }
 }
-// .character__shadow {
-//   position: absolute;
-//   top: -2.8%;
-//   left: 0;
-//   display: inline-block;
-//   opacity: 0;
-//   .swiper-slide-active & {
-//     animation: fadeIn 1s ease-out 1s 1 normal forwards;
-//   }
-//   img {
-//     transition: transform .3s ease-out;
-//     @include winPortrait {
-//       @include objectFit($w: 100vh, $h: 165.5vw, $of: cover);
-//       object-position: 43% 0;
-//     }
-//     @include winLandscape {
-//       width: 100%;
-//     }
-//   }
-// }
 .character__img {
   position: relative;
   left: -5%;
-  display: inline-block;
   opacity: 0;
+  overflow: hidden;
   @include winSizeM {
-    width: 50%;
+    width: 65%;
     height: 100dvh;
   }
   @include winSizeS {
-    padding-inline: 10vw;
   }
   .swiper-slide-active & {
     animation: slideInChar 1s ease-out 0s 1 normal forwards;
@@ -285,7 +278,7 @@
   picture {
     width: 100%;
     @include winSizeM {
-      height: 100dvh;
+      height: 105dvh;
     }
   }
   img {
@@ -310,6 +303,54 @@
       rgba(52, 21, 6, 1) 0,
       rgba(52, 21, 6, 0) 70%
     );
+  }
+}
+.character__shadow {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  @include winSizeM {
+    top: 15%;
+    left: 1%;
+  }
+  @include winSizeS {
+    top: 2%;
+    left: 3%;
+  }
+  .swiper-slide-active & {
+    animation: fadeIn2 1s ease-out 1s 1 normal forwards;
+  }
+  picture {
+    width: 100%;
+  }
+  img {
+    transition: transform .3s ease-out;
+  }
+}
+.character__pic {
+  position: relative;
+  picture {
+    animation: parallax-move3 linear both;
+    animation-timeline: scroll(root block);
+    transition: all 0.4s;
+  }
+}
+@keyframes parallax-move3 {
+  from {
+    transform: translateY(50%);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+@include winSizeS {
+  @keyframes parallax-move3 {
+    from {
+      transform: translateY(20%);
+    }
+    to {
+      transform: translateY(-15%);
+    }
   }
 }
 .character__name {
@@ -348,7 +389,7 @@
     position: absolute;
     left: 50%;
     top: calc(10% + 7rem);
-    width: 50%;
+    width: 35%;
   }
   @include winSizeS {
     margin-top: -10vw;
@@ -363,7 +404,7 @@
   position: relative;
   padding-left: 1.3em;
   margin-bottom: 3rem;
-  font-size: clamp(1rem, 5vw, 2rem);
+  font-size: clamp(1rem, 5vw, 1.5rem);
   font-weight: 300;
   background-image: url(../img/icon_spade.svg);
   background-repeat: no-repeat;
@@ -412,13 +453,13 @@
 }
 .sec-trailer__title {
   position: absolute;
-  place-self: center;
+  justify-self: center;
   inset: 0;
   @include winSizeM {
-    transform: translateY(-20vw);
+    top: calc(50% - 14vw - 2em);
   }
   @include winSizeS {
-    transform: translateY(-35vw);
+    top: calc(50% - 22.5vw - 2em);
   }
 }
 .movie {
@@ -454,6 +495,7 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100% auto;
+  opacity: 0.6;
   animation: parallax-move2 linear both;
   animation-timeline: scroll(root block);
   @include winLandscape {
@@ -473,19 +515,23 @@
 }
 .sec-gallery__title {
   position: absolute;
-  place-self: center;
+  justify-self: center;
   inset: 0;
   @include winSizeM {
-    transform: translateY(-23vw);
+    top: calc(50% - 17.5vw - 2em);
   }
   @include winSizeS {
-    transform: translateY(-30vw);
+    top: calc(50% - 22.5vw - 2em);
   }
 }
 #gallery-main {
   --swiper-navigation-sides-offset: -50px;
   .swiper-navigation-icon {
     display: none;
+  }
+  @include winSizeS {
+    --swiper-navigation-size: 8vw;
+    --swiper-navigation-sides-offset: -9vw;
   }
 }
 .gallery {
@@ -547,6 +593,10 @@
   left: 0;
   bottom: 0;
   width: 100%;
+  @include winSizeS {
+    bottom: auto;
+    top: calc(50% + 35vw);
+  }
 }
 .galleryThumbs__item {
   position: relative;
@@ -617,7 +667,8 @@
   line-height: $titleLineHeight;
   letter-spacing: $titleLetterSpacing;
 }
-.credits__items,.credits__items {
+.credits__items,
+.credits__items {
   letter-spacing: $titleLetterSpacing;
 }
 .credits__row {

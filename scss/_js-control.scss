@@ -1,0 +1,47 @@
+.js-fadeInUp {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(2rem);
+  &.is-inView {
+    visibility: visible;
+    animation: fadeInUp .5s ease-in-out .1s 1 alternate forwards;
+  }
+}
+.js-fadeIn {
+  visibility: hidden;
+  opacity: 0;
+  &.is-inView {
+    visibility: visible;
+    animation: fadeIn .5s ease-in-out .1s 1 alternate forwards;
+  }
+}
+.no-js {
+  .js-fadeInUp {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .js-fadeIn {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
