@@ -24,6 +24,7 @@ const galleryThumbs = new Swiper('#gallery-thumbs', {
   breakpoints: {
     901: {
       slidesPerView: 7,
+      loop: false,
     },
   },
 });

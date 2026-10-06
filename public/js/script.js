@@ -31,3 +31,26 @@
     targets.forEach((target) => observer.observe(target));
   }
 })();
+
+(function () {
+  //character first slide
+  const charSlideFirst = document.querySelector('.character__box');
+  charSlideFirst.classList.remove('swiper-slide-active');
+  const callback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('swiper-slide-active');
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+  const options = {
+    root: null,
+    rootMargin: '-50% 0px',
+    threshold: 0,
+  };
+  const observer = new IntersectionObserver(callback, options);
+  if (charSlideFirst) {
+    observer.observe(charSlideFirst);
+  }
+})();
