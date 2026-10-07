@@ -1,13 +1,25 @@
 (function () {
   //pagetop
   const pagetop = document.querySelector('.pagetop');
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 300) {
-      pagetop.classList.add('is-appear');
-    } else {
-      pagetop.classList.remove('is-appear');
-    }
-  });
+  if (pagetop) {
+    let isVisible = false;
+    window.addEventListener(
+      'scroll',
+      () => {
+        const scrollY = window.scrollY;
+        if (scrollY > 300) {
+          if (!isVisible) {
+            pagetop.classList.add('is-appear');
+            isVisible = true;
+          } else {
+            pagetop.classList.remove('is-appear');
+            isVisible = false;
+          }
+        }
+      },
+      { passive: true },
+    );
+  }
 })();
 
 (function () {
