@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  // GitHub Pagesのリポジトリ名を指定（前後のスラッシュを忘れずに）
+  // base: '/',
+  // ↓↓↓GitHub Pagesに公開するときはリポジトリ名を指定
   base: '/carmen/',
 });
