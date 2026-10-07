@@ -48,3 +48,5 @@ const galleryMain = new Swiper('#gallery-main', {
     swiper: galleryThumbs,
   },
 });
+
+import './script.js';
