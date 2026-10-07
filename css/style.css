@@ -262,6 +262,7 @@ a {
 }
 
 .gnav__link {
+  position: relative;
   display: block;
   padding-left: 1em;
   background-image: url(../img/icon_spade.png);
@@ -275,8 +276,24 @@ a {
     font-size: 1.375em;
     transition: all .3s;
   }
-  .gnav__link:hover {
-    filter: drop-shadow(4px 4px 8px rgba(255, 248, 229, 0.6));
+  .gnav__link::after {
+    content: '';
+    position: absolute;
+    place-self: end center;
+    inset: 0;
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #AF152C;
+    box-shadow: 2px 1px 0 #1E1E1E;
+    margin-left: 1em;
+    transition: width .3s;
+  }
+  .gnav__link:hover::after {
+    width: 2em;
+  }
+  .gnav__link.is-current::after {
+    width: 2em;
   }
 }
 @media screen and (max-width: 900px) {

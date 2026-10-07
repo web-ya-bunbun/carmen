@@ -39,6 +39,7 @@
   letter-spacing: $titleLetterSpacing;
 }
 .gnav__link {
+  position: relative;
   display: block;
   padding-left: 1em;
   background-image: url(../img/icon_spade.png);
@@ -49,8 +50,28 @@
   @include winSizeM {
     font-size: 1.375em;
     transition: all .3s;
+    &::after {
+      content: '';
+      position: absolute;
+      place-self: end center;
+      inset: 0;
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: $accentColor2;
+      box-shadow: $textShadowS;
+      margin-left: 1em;
+      transition: width .3s;
+    }
     &:hover {
-      filter: drop-shadow(4px 4px 8px rgba($color: $textColor, $alpha: 0.6));
+      &::after {
+        width: 2em;
+      }
+    }
+    &.is-current {
+      &::after {
+        width: 2em;
+      }
     }
   }
   @include winSizeS {
