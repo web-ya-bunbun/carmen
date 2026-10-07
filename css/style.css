@@ -713,7 +713,7 @@ a {
     height: 100dvh;
   }
 }
-.swiper-slide-active .character__img {
+.swiper-slide-active.is-inView .character__img {
   animation: slideInChar 1s ease-out 0s 1 normal forwards;
 }
 .character__img picture {

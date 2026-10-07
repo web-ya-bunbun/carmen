@@ -33,13 +33,12 @@
 })();
 
 (function () {
-  //character first slide
-  const charSlideFirst = document.querySelector('.character__box');
-  charSlideFirst.classList.remove('swiper-slide-active');
+  //character slideIn
+  const charSlides = document.querySelectorAll('.character__box');
   const callback = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('swiper-slide-active');
+        entry.target.classList.add('is-inView');
         observer.unobserve(entry.target);
       }
     });
@@ -50,7 +49,7 @@
     threshold: 0,
   };
   const observer = new IntersectionObserver(callback, options);
-  if (charSlideFirst) {
-    observer.observe(charSlideFirst);
+  if (charSlides) {
+    charSlides.forEach((charSlide) => observer.observe(charSlide));
   }
 })();
