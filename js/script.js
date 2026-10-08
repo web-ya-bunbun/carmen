@@ -11,7 +11,9 @@
           if (!isVisible) {
             pagetop.classList.add('is-appear');
             isVisible = true;
-          } else {
+          }
+        } else {
+          if (isVisible) {
             pagetop.classList.remove('is-appear');
             isVisible = false;
           }
@@ -73,7 +75,6 @@
   const callback = (entries, observer) => {
     entries.forEach((entry) => {
       const currentId = entry.target.id;
-      console.log(currentId);
       if (entry.isIntersecting) {
         currentSections.forEach((elm) => {
           elm.classList.remove('is-current');
@@ -109,4 +110,30 @@
       observer.observe(currentSection),
     );
   }
+})();
+
+(function () {
+  //Character music
+  const charProf = document.querySelectorAll('.character__profile');
+  // const musicBtns = document.querySelectorAll('.character__music');
+  const audio = document.querySelectorAll('.character__music  + audio');
+  charProf.forEach((elm) => {
+    const playBtn = elm.querySelector('.character__music');
+    const music = elm.querySelector('audio');
+    playBtn.addEventListener('click', function () {
+      if (!music.paused) {
+        audio.forEach((e) => {
+          e.pause();
+          e.removeAttribute('controls', '');
+        });
+      } else {
+        audio.forEach((e) => {
+          e.pause();
+          e.removeAttribute('controls', '');
+        });
+        music.play();
+        music.setAttribute('controls', '');
+      }
+    });
+  });
 })();

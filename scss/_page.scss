@@ -324,7 +324,7 @@
     width: 100%;
   }
   img {
-    transition: transform .3s ease-out;
+    transition: transform 0.3s ease-out;
   }
 }
 .character__pic {
@@ -436,12 +436,31 @@
   }
 }
 .character__music {
-  padding-left: 1.6em;
+  position: relative;
+  padding-left: 1.8em;
   cursor: pointer;
-  background: url(../img/icon_music.svg) 0 0 no-repeat;
-  background-size: contain;
   line-height: 1.5;
   white-space: nowrap;
+  transition: background-color .3s;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    top: 0;
+    left: 0;
+    background-color: $textColor;
+    mask-image: url(../img/icon_play.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    transition: background-color .3s;
+  }
+  &:hover {
+    color: $accentColor1;
+    &::before {
+      background-color: $accentColor1;
+    }
+  }
 }
 
 /* Trailer */
