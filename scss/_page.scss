@@ -588,14 +588,6 @@
   background-position: 0 0;
   background-repeat: no-repeat;
   z-index: 1;
-  @include winPortrait {
-    width: 5.2vw;
-    height: 7.8667vw;
-  }
-  @include winLandscape {
-    width: 24px;
-    height: 36px;
-  }
   &::before,
   &::after {
     display: none;

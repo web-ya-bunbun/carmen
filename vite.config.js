@@ -5,6 +5,6 @@ export default defineConfig(({ command }) => {
     //ロリポップ用
     base: command === 'build' ? '/samples/carmen/' : '/',
     //GitHub Pages用
-    // base: command === 'build' ? '/samples/carmen/' : '/',
+    // base: command === 'build' ? '/carmen/' : '/',
   };
 });

@@ -1102,18 +1102,6 @@ a {
   background-repeat: no-repeat;
   z-index: 1;
 }
-@media screen and (orientation: portrait) {
-  .gallery__button {
-    width: 5.2vw;
-    height: 7.8667vw;
-  }
-}
-@media screen and (orientation: landscape) {
-  .gallery__button {
-    width: 24px;
-    height: 36px;
-  }
-}
 .gallery__button::before, .gallery__button::after {
   display: none;
 }
