@@ -117,6 +117,13 @@
   const charProf = document.querySelectorAll('.character__profile');
   const charMusic = document.querySelectorAll('.character__music');
   const audio = document.querySelectorAll('.character__music  + audio');
+  audio.forEach((elm) => {
+    elm.addEventListener('ended', () => {
+      charMusic.forEach((e) => {
+        e.classList.remove('is-playing');
+      });
+    });
+  });
   charProf.forEach((elm) => {
     const playBtn = elm.querySelector('.character__music');
     const music = elm.querySelector('audio');
