@@ -2,6 +2,9 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(({ command }) => {
   return {
-    base: command === 'build' ? '/carmen/' : '/',
+    //ロリポップ用
+    base: command === 'build' ? '/samples/carmen/' : '/',
+    //GitHub Pages用
+    // base: command === 'build' ? '/samples/carmen/' : '/',
   };
 });
