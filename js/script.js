@@ -115,7 +115,7 @@
 (function () {
   //Character music
   const charProf = document.querySelectorAll('.character__profile');
-  // const musicBtns = document.querySelectorAll('.character__music');
+  const charMusic = document.querySelectorAll('.character__music');
   const audio = document.querySelectorAll('.character__music  + audio');
   charProf.forEach((elm) => {
     const playBtn = elm.querySelector('.character__music');
@@ -124,15 +124,17 @@
       if (!music.paused) {
         audio.forEach((e) => {
           e.pause();
-          e.removeAttribute('controls', '');
+          playBtn.classList.remove('is-playing');
         });
       } else {
         audio.forEach((e) => {
           e.pause();
-          e.removeAttribute('controls', '');
+        });
+        charMusic.forEach((e) => {
+          e.classList.remove('is-playing');
         });
         music.play();
-        music.setAttribute('controls', '');
+        playBtn.classList.add('is-playing');
       }
     });
   });

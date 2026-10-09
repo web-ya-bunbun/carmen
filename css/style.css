@@ -920,7 +920,7 @@ a {
   cursor: pointer;
   line-height: 1.5;
   white-space: nowrap;
-  transition: background-color .3s;
+  transition: color 0.3s;
 }
 .character__music::before {
   content: '';
@@ -933,7 +933,7 @@ a {
   mask-image: url(../img/icon_play.svg);
   mask-size: contain;
   mask-repeat: no-repeat;
-  transition: background-color .3s;
+  transition: background-color 0.3s;
 }
 .character__music:hover {
   color: rgba(200, 173, 173, 0.8);
@@ -941,7 +941,18 @@ a {
 .character__music:hover::before {
   background-color: rgba(200, 173, 173, 0.8);
 }
+.character__music.is-playing {
+  animation: textBlink 1s linear 0s alternate infinite;
+}
 
+@keyframes textBlink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
 /* Trailer */
 .sec-trailer {
   position: relative;
