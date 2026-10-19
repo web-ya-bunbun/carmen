@@ -11,6 +11,10 @@ const characterSlide = new Swiper('#character-list', {
       return `<div class="character__thumb ${className}"><img class="character__thumb-img" src="${imgUrl}" alt=""></div>`;
     },
   },
+  a11y: {
+    enabled: true,
+    paginationBulletMessage: '{{index}}人目のキャラクターを表示',
+  },
 });
 
 //Gallery Swiper
@@ -27,6 +31,9 @@ const galleryThumbs = new Swiper('#gallery-thumbs', {
       loop: false,
     },
   },
+  keyboard: {
+    enabled: true,
+  },
 });
 
 const galleryMain = new Swiper('#gallery-main', {
@@ -39,6 +46,7 @@ const galleryMain = new Swiper('#gallery-main', {
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
+    pauseOnMouseEnter: true,
   },
   navigation: {
     nextEl: '.swiper-button-next',
@@ -47,6 +55,14 @@ const galleryMain = new Swiper('#gallery-main', {
   thumbs: {
     swiper: galleryThumbs,
   },
+  a11y: {
+    enabled: true,
+    prevSlideMessage: '前のスライドへ',
+    nextSlideMessage: '次のスライドへ',
+    firstSlideMessage: '最初のスライド',
+    lastSlideMessage: '最後のスライド',
+  },
 });
 
+// script.jsをimport
 import './script.js';

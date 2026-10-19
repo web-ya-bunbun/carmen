@@ -17,8 +17,8 @@
   <header class="header">
     <input type="checkbox" name="menuBtn" id="menuBtn" class="menuBtn__func" hidden>
     <div class="menuBtn">
-      <label for="menuBtn" class="menuBtn__item">
-        <svg class="menuBtn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180">
+      <label for="menuBtn" class="menuBtn__item" aria-label="メニューを開閉する">
+        <svg class="menuBtn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" aria-hidden="true">
           <rect class="menuLine" x="0" y="0" width="240" height="15" rx="7.5" ry="7.5"/>
           <rect class="menuLine" x="0" y="82.5" width="240" height="15" rx="7.5" ry="7.5"/>
           <rect class="menuLine" x="0" y="165" width="240" height="15" rx="7.5" ry="7.5"/>
@@ -36,7 +36,7 @@
         </ul>
       </nav>
     </div>
-    <h1 class="title"><img src="img/logo.png" alt=""></h1>
+    <h1 class="title"><img src="img/logo.png" alt="カルメン Carmen - passionate red rose -"></h1>
     <div class="description">
       <p class="description__txt">あの名作オペラが<br>アニメになって登場</p>
       <p class="description__info">2099.12.31 (Sat) 19:00〜<br>ネコネコTVにて無料ストリーミング配信 </p>
@@ -44,7 +44,7 @@
     <div class="mv">
       <picture>
         <source media="(min-width: 901px)" srcset="img/mv_pc.png">
-        <img src="img/mv_sp.png" alt="">
+        <img src="img/mv_sp.png" alt="夕日に染まる闘牛場の中央に1人佇む、黒いドレスを纏ったの女性の後ろ姿">
       </picture>
     </div>
   </header>
@@ -76,7 +76,7 @@
               <div class="character__pic character__pic--carmen">
                 <picture>
                   <source media="(min-width: 901px)" srcset="img/char_carmen.png">
-                  <img src="img/char_carmen_sp.png" alt="">
+                  <img src="img/char_carmen_sp.png" alt="キャラクターイラスト：カルメン">
                 </picture>
               </div>
             </div>
@@ -88,7 +88,7 @@
                 <p>男たちを翻弄する魔性の魅力を持つ。</p>
                 <p>誰からの束縛も拒み、己の信じる愛と気高い生き方をどこまでも貫き通す。</p>
               </div>
-              <button class="character__music">アリア：恋は野の鳥（ハバネラ）</button>
+              <button class="character__music" aria-label="再生・停止">アリア：恋は野の鳥（ハバネラ）</button>
               <audio src="mp3/habanera.mp3"></audio>
             </div>
           </div>
@@ -103,7 +103,7 @@
               <div class="character__pic character__pic--jose">
                 <picture>
                   <source media="(min-width: 901px)" srcset="img/char_jose.png">
-                  <img src="img/char_jose_sp.png" alt="">
+                  <img src="img/char_jose_sp.png" alt="キャラクターイラスト：ドン・ホセ">
                 </picture>
               </div>
             </div>
@@ -115,7 +115,7 @@
                 <p>カルメンの誘惑に溺れ、職も名誉も捨てて転落していく。</p>
                 <p>彼女への歪んだ愛は執着へと変わり、激しい嫉妬と絶望の果てに狂気へと駆り立てられていく。</p>
               </div>
-              <button class="character__music">アリア：おまえの投げたこの花を（花の歌）</button>
+              <button class="character__music" aria-label="再生・停止">アリア：おまえの投げたこの花を（花の歌）</button>
               <audio src="mp3/la_fleur_que.mp3"></audio>
             </div>
           </div>
@@ -130,7 +130,7 @@
               <div class="character__pic character__pic--micaela">
                 <picture>
                   <source media="(min-width: 901px)" srcset="img/char_micaela.png">
-                  <img src="img/char_micaela_sp.png" alt="">
+                  <img src="img/char_micaela_sp.png" alt="キャラクターイラスト：ミカエラ">
                 </picture>
               </div>
             </div>
@@ -142,7 +142,7 @@
                 <p>病床の母親の言葉を伝えるため、危険を顧みず山中の密輸団のアジトへ単身ホセを探しにいく。</p>
                 <p>カルメンとは対照的な、清純さと強い芯を持つ女性。</p>
               </div>
-              <button class="character__music">アリア：何を恐れることがありましょう</button>
+              <button class="character__music" aria-label="再生・停止">アリア：何を恐れることがありましょう</button>
               <audio src="mp3/je_dis_que_rien.mp3"></audio>
             </div>
           </div>
@@ -157,7 +157,7 @@
               <div class="character__pic character__pic--escamillo">
                 <picture>
                   <source media="(min-width: 901px)" srcset="img/char_escamillo.png">
-                  <img src="img/char_escamillo_sp.png" alt="">
+                  <img src="img/char_escamillo_sp.png" alt="キャラクターイラスト：エスカミーリョ">
                 </picture>
               </div>
             </div>
@@ -169,7 +169,7 @@
                 <p>命がけで雄牛と戦う雄々しい姿でカルメンの心を奪う。</p>
                 <p>ホセの激しい嫉妬を買いながらも、堂々と彼女への愛を貫く男。</p>
               </div>
-              <button class="character__music">アリア：諸君の乾杯を喜んで受けよう（闘牛士の歌）</button>
+              <button class="character__music" aria-label="再生・停止">アリア：諸君の乾杯を喜んで受けよう（闘牛士の歌）</button>
               <audio src="mp3/toreador.mp3"></audio>
             </div>
           </div>
@@ -192,19 +192,19 @@
         <div id="gallery-main" class="gallery__main">
           <div class="swiper-wrapper">
             <div class="swiper-slide gallery__item"><img class="gallery__img"
-                src="img/gallery_01.png" alt=""></div>
+                src="img/gallery_01.png" alt="タバコ工場にて、カルメンと女工たちの喧嘩"></div>
             <div class="swiper-slide gallery__item"><img class="gallery__img"
-                src="img/gallery_02.png" alt=""></div>
+                src="img/gallery_02.png" alt="ミカエラがホセの元に、故郷の母からの手紙を届ける"></div>
             <div class="swiper-slide gallery__item"><img class="gallery__img"
-                src="img/gallery_03.png" alt=""></div>
+                src="img/gallery_03.png" alt="人気闘牛士エスカミーリョに眼差しを向けるカルメン"></div>
             <div class="swiper-slide gallery__item"><img class="gallery__img"
-                src="img/gallery_04.png" alt=""></div>
+                src="img/gallery_04.png" alt="トランプ占いにて不吉なカードを引き、青ざめるカルメン"></div>
             <div class="swiper-slide gallery__item"><img class="gallery__img"
-                src="img/gallery_05.png" alt=""></div>
+                src="img/gallery_05.png" alt="岩山にて、カルメンとホセの間に緊張が走る"></div>
             <div class="swiper-slide gallery__item"><img class="gallery__img"
-                src="img/gallery_06.png" alt=""></div>
+                src="img/gallery_06.png" alt="ホセを取り戻そうと、1人岩山に乗り込む決意をするミカエラ"></div>
             <div class="swiper-slide gallery__item"><img class="gallery__img"
-                src="img/gallery_07.png" alt=""></div>
+                src="img/gallery_07.png" alt="闘牛場にて、言い争うカルメンとホセ"></div>
           </div>
           <div class="swiper-button-next gallery__button gallery__button--next"></div>
           <div class="swiper-button-prev gallery__button gallery__button--prev"></div>
@@ -214,19 +214,19 @@
         <div id="gallery-thumbs" class="galleryThumbs js-fadeInUp">
           <div class="swiper-wrapper">
             <div class="swiper-slide galleryThumbs__item"><img class="galleryThumbs__img"
-                src="img/gallery_01.png" alt=""></div>
+                src="img/gallery_01.png" alt="1枚目の画像を表示"></div>
             <div class="swiper-slide galleryThumbs__item"><img class="galleryThumbs__img"
-                src="img/gallery_02.png" alt=""></div>
+                src="img/gallery_02.png" alt="2枚目の画像を表示"></div>
             <div class="swiper-slide galleryThumbs__item"><img class="galleryThumbs__img"
-                src="img/gallery_03.png" alt=""></div>
+                src="img/gallery_03.png" alt="3枚目の画像を表示"></div>
             <div class="swiper-slide galleryThumbs__item"><img class="galleryThumbs__img"
-                src="img/gallery_04.png" alt=""></div>
+                src="img/gallery_04.png" alt="4枚目の画像を表示）"></div>
             <div class="swiper-slide galleryThumbs__item"><img class="galleryThumbs__img"
-                src="img/gallery_05.png" alt=""></div>
+                src="img/gallery_05.png" alt="5枚目の画像を表示"></div>
             <div class="swiper-slide galleryThumbs__item"><img class="galleryThumbs__img"
-                src="img/gallery_06.png" alt=""></div>
+                src="img/gallery_06.png" alt="6枚目の画像を表示"></div>
             <div class="swiper-slide galleryThumbs__item"><img class="galleryThumbs__img"
-                src="img/gallery_07.png" alt=""></div>
+                src="img/gallery_07.png" alt="7枚目の画像を表示"></div>
           </div>
         </div>
       </div>
